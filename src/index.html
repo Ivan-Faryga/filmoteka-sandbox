@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заголовок страницы</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <!-- <include src="./partials/example.html"></include> -->
+    <!-- <include src="./partials/header.html"></include>
+    <include src="./partials/main.html"></include>
+    <include src="./partials/footer.html"></include> -->
+
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <a class="logo-link link" href="./index.html">
+            <!-- <svg class="icon-film" width="24px" height="24px">
+              <use href="./images/svg-icon/symbol-defs.svg#icon-film"></use>
+            </svg> -->
+            <p class="header-text">Filmoteka</p>
+          </a>
+
+          <ul class="navigation-list list">
+            <li class="navigation-list_item current home-js">
+              <a class="navigation-list_link link" href="/index.html" lang="en">HOME</a>
+            </li>
+            <li class="navigation-list_item myLibrary-js">
+              <a class="navigation-list_link link" href="#" lang="en">MY LIBRARY</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="search subscription">
+          <form class="search-form js-search-form subscription__search">
+            <input
+              class="search-control js-search-control subscription__text"
+              type="text"
+              name="query"
+              autocomplete="off"
+              placeholder="Search movies..."
+            />
+            <button class="search__btn subscription__button" type="submit">
+              <!-- <svg class="search-icon subscription__svg" width="12px" height="12px">
+                <use href="./images/svg-icon/symbol-defs.svg#icon-search-2"></use> -->
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-button">
+          <button class="header-button_watch is-hidden" type="button" lang="en">WATCHED</button>
+          <button class="header-button_queue is-hidden" type="button" lang="en">QUEUE</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- <h1 class="visually-hidden">Movie library</h1> -->
+      <section class="movie-gallery movie-gallery-js">
+        <div class="container">
+          <ul class="gallery-list list js-gallery-list"></ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+
+    
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
