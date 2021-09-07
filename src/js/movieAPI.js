@@ -1,10 +1,13 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMmMxOTljNzBjZjIxYzc3YWMwNmI1ZDc0ZDQ0NDU0NSIsInN1YiI6IjYxMzIxZjYxYjNmNmY1MDA0MjhkYjlmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MonI6BUoKyf7TbbawP-d-_SIbBRaum0hE8AdHVWLRhM";
-
+const API_KEY = '22c199c70cf21c77ac06b5d74d444545';
 
 function getTrandingMovies(page = 1) {
-    axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`)
+  axios
+    .get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&page=${page}`)
+    .then(response => console.log(response));
+
+  //   return response.data;
 }
 
 export { getTrandingMovies };

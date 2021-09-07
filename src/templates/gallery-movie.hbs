@@ -1,15 +1,16 @@
-<li class='gallery-item'>
-  <div class='main-wrapper'>
-    <a href='' class='gallery-item-link'>
+{{#each this}}
+  <li class='gallery-item'>
+    <div class='main-wrapper'>
       <div class='img-wrapper'>
-        <img src='' alt='' />
+        <img src='{{poster_path}}' class='js-card-img' alt='{{title}}' />
       </div>
       <div class='movie-stats'>
-        <h4 class='movie-title'></h4>
-        <p><span class='movie-genres'></span></p>
+        <h4 class='movie-title'>{{name}}</h4>
+        <p><span class='movie-genres'>{{genres_short_list}}</span></p>
         <p><span>|</span></p>
-        <p class='movie-release-date'></p>
+        <p class='movie-release-date'>{{first_air_date}}</p>
+        <p class='votes'>{{average_votes}}</p>
       </div>
-    </a>
-  </div>
-</li>
+    </div>
+  </li>
+{{/each}}
