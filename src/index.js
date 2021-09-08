@@ -5,7 +5,8 @@ import { getTrandingMovies } from './js/movieAPI';
 
 console.log(getTrandingMovies);
 
-getTrandingMovies();
+// documet.addEventListener('DOMContentLoaded', () => );
+getTrandingMovies()
 
 const refs = {
   input: documet.querySelector('.js-search-control'),
