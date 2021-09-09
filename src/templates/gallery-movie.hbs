@@ -1,4 +1,4 @@
-{{#each this}}
+{{!-- {{#each this}}
   <li class='gallery-item'>
     <div class='main-wrapper'>
       <div class='img-wrapper'>
@@ -12,5 +12,42 @@
         <p class='votes'>{{average_votes}}</p>
       </div>
     </div>
+  </li>
+{{!-- {{/each}} --}}
+
+{{#each this}}
+  <li class='gallery-items' data-index='{{id}}'>
+    <div class='one-card'>
+      <div class='moviе-item__img'>
+        <img
+          class='js-card-img'
+          src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+          alt='moviе poster: {{title}}'
+        />
+      </div>
+      <div class='moviе-stats'>
+        <h2 class='moviе-stats__title'>
+          {{title}}
+        </h2>
+        <div class='moviе-stats__info'>
+          <ul class='moviе-genre'>
+
+            <li class='moviе-genre__item'>{{genres_short_list}}</li>
+
+          </ul>
+          <p class='moviе-year'>
+            {{#if release_date}}
+              <year class='moviе-year__getFullYear'>{{release_date}}</year>
+            {{else}}
+              <year class='moviе-year__getFullYear'>{{first_air_date}}</year>
+            {{/if}}
+          </p>
+          <p class='moviе-vote'>
+            {{vote_average}}
+          </p>
+        </div>
+      </div>
+    </div>
+
   </li>
 {{/each}}
